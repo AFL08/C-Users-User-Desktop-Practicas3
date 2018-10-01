@@ -16,7 +16,7 @@ app.get('/', function(req, res) {
 
 });
 
-/*Hola*/
+
 
 app.get('/Error', function(req, res) {
     var error = "<h1>¿Por que estas en esta pagina?</h1>";
@@ -29,7 +29,7 @@ app.get('/nombres', function(req, res) {
     //res.json({ "usuarios": { "Alvaro", "Asier" } })
 
 });
-
+/*Hola*/
 app.listen(3000, function() {
     console.log('Aplicación ejemplo, escuchando el puerto 3000!');
 });
