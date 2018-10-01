@@ -41,10 +41,7 @@ app.get('/nombres/:nombreUsuario', function(req, res) {
     /*console.log(nombreUsuario);
     console.log(usuarios.nombreUsuario);
     var numeroUsuarios = 0;*/
-    /*
-    for (var i = 0; i < usuarios.size; i++) {
 
-    }*/
     var usuarios = [{ "nombreUsuario": "Alvaro", "edadUsuario": 22, "hobby": "Videojuegos" }, { "nombreUsuario": "Asier", "edadUsuario": 23, "hobby": "Videojuegos" }];
     var nombreUsuarioRegistrado = req.params.nombreUsuario;
     var usuarioRegistrado;
