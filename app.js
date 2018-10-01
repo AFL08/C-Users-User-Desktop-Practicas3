@@ -16,6 +16,8 @@ app.get('/', function(req, res) {
 
 });
 
+/*Hola*/
+
 app.get('/Error', function(req, res) {
     var error = "<h1>¿Por que estas en esta pagina?</h1>";
     res.send(error);
