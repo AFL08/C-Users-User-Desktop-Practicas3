@@ -51,7 +51,7 @@ app.get('/nombres/:nombreUsuario', function(req, res) {
         if (usuarios[registro].nombreUsuario == nombreUsuarioRegistrado) {
             usuarioRegistrado = usuarios[registro].edadUsuario;
         }
-        // . console.log(registro);
+        //. console.log(registro);
         /*res.send(usuarioRegistrado);
         console.log(usuarioRegistrado);*/
 
