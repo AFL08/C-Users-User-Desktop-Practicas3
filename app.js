@@ -9,12 +9,14 @@ app.get('/', function(req, res) {
 
     var datosUsuario = '<p>Me llamo ' + nombreUsuario + ' y mi edad es de ' + edadUsuario + ' años</p><br/>';
     var botonUsuario = '<a name="enlaceError" href="http://localhost:3000/Error">Ir a ventana de error</a><br/>'
-
     cajaTexto = "<input type='textbox' name='cajaTextoNombreUsuario' value='" + nombreUsuarioArray + "'/>";
 
-    res.send('<h1>Hola Mundo</h1> ' + datosUsuario + '' + botonUsuario + "" + cajaTexto);
+    res.send('<h1>Hola Mundo</h1> ' + datosUsuario + '' + botonUsuario + "" + cajaTexto + "<br/><a href='http://localhost:3000/nombres/" + cajaTexto + "'" +
+        " name='linkNombres'></a>");
 
 });
+
+
 
 app.get('/Error', function(req, res) {
     var error = "<h1>¿Por que estas en esta pagina?</h1>";
@@ -27,24 +29,20 @@ app.get('/nombres', function(req, res) {
     //res.json({ "usuarios": { "Alvaro", "Asier" } })
 
 });
-
+/*Hola*/
 app.listen(3000, function() {
     console.log('Aplicación ejemplo, escuchando el puerto 3000!');
 });
 var nombreUsuario = null;
 var edadUsuario = 0;
-var usuarios = ({ "nombreUsuario": "Alvaro", "edadUsuario": 25 }, { "nombreUsuario": "Asier", "edadUsuario": 32 });
 app.get('/nombres/:nombreUsuario', function(req, res) {
 
 
     /*.console.log(nombreUsuario);
     console.log(usuarios.nombreUsuario);
     var numeroUsuarios = 0;*/
-    /*
-    for (var i = 0; i < usuarios.size; i++) {
 
-    }*/
-    var usuarios = [{ "nombreUsuario": "Alvaro", "edadUsuario": 25 }, { "nombreUsuario": "Asier", "edadUsuario": 32 }];
+    var usuarios = [{ "nombreUsuario": "Alvaro", "edadUsuario": 22, "hobby": "Videojuegos" }, { "nombreUsuario": "Asier", "edadUsuario": 23, "hobby": "Videojuegos" }];
     var nombreUsuarioRegistrado = req.params.nombreUsuario;
     var usuarioRegistrado;
 
