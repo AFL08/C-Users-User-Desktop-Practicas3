@@ -38,7 +38,7 @@ var edadUsuario = 0;
 app.get('/nombres/:nombreUsuario', function(req, res) {
 
 
-    /*console.log(nombreUsuario);
+    /*.console.log(nombreUsuario);
     console.log(usuarios.nombreUsuario);
     var numeroUsuarios = 0;*/
 
