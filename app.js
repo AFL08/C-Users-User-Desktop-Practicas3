@@ -37,7 +37,7 @@ var usuarios = ({ "nombreUsuario": "Alvaro", "edadUsuario": 25 }, { "nombreUsuar
 app.get('/nombres/:nombreUsuario', function(req, res) {
 
 
-    /*console.log(nombreUsuario);
+    /*.console.log(nombreUsuario);
     console.log(usuarios.nombreUsuario);
     var numeroUsuarios = 0;*/
     /*
