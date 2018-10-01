@@ -9,10 +9,10 @@ app.get('/', function(req, res) {
 
     var datosUsuario = '<p>Me llamo ' + nombreUsuario + ' y mi edad es de ' + edadUsuario + ' años</p><br/>';
     var botonUsuario = '<a name="enlaceError" href="http://localhost:3000/Error">Ir a ventana de error</a><br/>'
-
     cajaTexto = "<input type='textbox' name='cajaTextoNombreUsuario' value='" + nombreUsuarioArray + "'/>";
 
-    res.send('<h1>Hola Mundo</h1> ' + datosUsuario + '' + botonUsuario + "" + cajaTexto);
+    res.send('<h1>Hola Mundo</h1> ' + datosUsuario + '' + botonUsuario + "" + cajaTexto + "<br/><a href='http://localhost:3000/nombres/" + cajaTexto + "'" +
+        " name='linkNombres'></a>");
 
 });
 
@@ -33,7 +33,6 @@ app.listen(3000, function() {
 });
 var nombreUsuario = null;
 var edadUsuario = 0;
-var usuarios = ({ "nombreUsuario": "Alvaro", "edadUsuario": 25 }, { "nombreUsuario": "Asier", "edadUsuario": 32 });
 app.get('/nombres/:nombreUsuario', function(req, res) {
 
 
